@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños</title>
+    <style>
+        body {
+            font-family:'Brush Script MT, Brush Script Std', cursive;
+            background: linear-gradient(135deg,#D9D9D9, #BFBFBF);
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 4rem;
+            color: #D9626B;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+        .advertencia {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .container {
+            display: inline-block;
+            max-width: 400px;
+        }
+        img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+        .texto {
+            margin-top: 15px;
+            background:#D9D8D2;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+            font-size: 1.1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease; 
+            font-style:'justify';
+        }
+        .mostrar {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Feliz Cumpleaños</h1>
+    <p class="advertencia">Haz clic en la imagen</p>
+
+    <div class="container">
+        <img src="../img/image.jpg" onclick="mostrarTexto()">
+        <div class="texto" id="mensaje">
+            En esta ocasión especial como lo es tu cumpleaños, te quisera desear lo mejor para ti, ya que a lo largo de estos ultimos años has sido un pilar demasiado grande para mi, donde he encontrado un apoyo incondiconal y un ejemplo a seguir donde menos lo esperaba. Gracias por ser mi ejemplo a seguir, gracias por siempre estar ahi, gracias por nunca dejarme solo, gracias por apoyarme cuando mas lo necesitaba, y así podria seguir... simplemente gracias por todo. Te quiero muchísimo ❤️.
+        </div>
+    </div>
+
+    <script>
+        function mostrarTexto() {
+            const texto = document.getElementById("mensaje");
+            texto.classList.toggle("mostrar");
+        }
+    </script>
+
+</body>
+</html>
